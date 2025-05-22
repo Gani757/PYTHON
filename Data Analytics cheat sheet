@@ -1,0 +1,72 @@
+This source provides a quick reference, or "cheat sheet," for common tasks in data analytics using Python. It highlights essential libraries like Pandas for data manipulation, NumPy for numerical operations, and Matplotlib/Seaborn for visualisation. The document concisely covers how to load, explore, select, modify, group, and sort data using Pandas, along with fundamental mathematical functions in NumPy and various plotting techniques. Overall, it serves as a handy guide to key commands and concepts for working with data in Python.
+Python Cheat Sheet for Data Analytics covering essential libraries, commands, and concepts:
+🐍 Basics
+# Importing
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+📊 Pandas: Data Manipulation
+Loading Data
+df = pd.read_csv("file.csv") # Read CSV
+df.to_csv("out.csv", index=False) # Save to CSV
+Exploring Data
+df.head() # First 5 rows
+df.tail() # Last 5 rows
+df.info() # Data types & non-null counts
+df.describe() # Summary statistics
+df.columns # Column names
+df.shape # Rows & columns count
+df.dtypes # Data types
+Selecting Data
+df['col'] # Single column
+df[['col1', 'col2']] # Multiple columns
+df.iloc[0] # Row by index
+df.loc[0, 'col'] # Specific value
+Filtering & Querying
+df[df['col'] > 100] # Condition
+df.query("col > 100 and col2 == 'A'") # SQL-like
+Modifying Data
+df['new'] = df['col1'] + df['col2'] # New column
+df.rename(columns={'old': 'new'}) # Rename
+df.drop(columns=['col']) # Drop column
+df.dropna() # Drop missing
+df.fillna(0) # Fill missing
+df.astype({'col': 'int'}) # Convert type
+Grouping & Aggregation
+df.groupby('category').mean()
+df.pivot_table(values='sales', index='region', columns='year', aggfunc='sum')
+Sorting
+df.sort_values(by='col', ascending=False)
+🔢 NumPy: Numerical Operations
+a = np.array([1, 2, 3])
+np.mean(a) # Mean
+np.median(a) # Median
+np.std(a) # Standard deviation
+np.sum(a) # Sum
+np.arange(0, 10, 2) # [0 2 4 6 8]
+np.linspace(0, 1, 5) # [0. 0.25 0.5 0.75 1.]
+📈 Matplotlib & Seaborn: Visualization
+Matplotlib
+plt.plot(df['col'])
+plt.scatter(x, y)
+plt.bar(x, height)
+plt.hist(df['col'], bins=10)
+plt.title("Title")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.show()
+Seaborn
+sns.histplot(df['col'])
+sns.boxplot(x='col1', y='col2', data=df)
+sns.heatmap(df.corr(), annot=True, cmap="coolwarm")
+sns.pairplot(df)
+🧹 Data Cleaning Tips
+df.duplicated().sum() # Check duplicates
+df.drop_duplicates() # Drop duplicates
+df['col'].str.lower() # Lowercase text
+df['col'].str.contains('txt') # Text contains
+🧠 Statistical Summary
+df['col'].value_counts() # Frequency count
+df['col'].unique() # Unique values
+df.corr() # Correlation matrix
