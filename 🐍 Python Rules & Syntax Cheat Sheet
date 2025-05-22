@@ -1,0 +1,138 @@
+🐍 Python Rules & Syntax Cheat Sheet 
+
+📌 1. General Rules
+✅ Python is:
+Case-sensitive → Name ≠ name
+
+Indentation-based (no {} like in C or Java)
+
+Written in English-like syntax
+
+# ✅ Correct
+if True:
+    print("Hello")
+
+# ❌ Incorrect (IndentationError)
+if True:
+print("Hello")\
+
+🧾 2. Comments
+Single-line comment: #
+Multi-line comment: ''' ... ''' or """ ... """
+
+# This is a comment
+
+'''
+This is a
+multi-line comment
+'''
+
+🧠 3. Variables and Naming Rules
+Must start with a letter or underscore
+Cannot start with a number
+Can include letters, numbers, and underscores
+Case-sensitive
+
+my_name = "Alice"    # ✅ Valid
+_name1 = "Bob"       # ✅ Valid
+1name = "Charlie"    # ❌ Invalid
+
+🔢 4. Data Types
+Type	Example	Description
+int	5, -10	Whole numbers
+float	3.14, -0.01	Decimal numbers
+str	'hello', "world"	Text strings
+bool	True, False	Boolean logic
+list	[1, 2, 3]	Ordered, mutable collection
+tuple	(1, 2, 3)	Ordered, immutable list
+dict	{"a": 1}	Key-value pairs
+set	{1, 2, 3}	Unique, unordered collection
+None	None	Represents "nothing"
+
+🔁 5. Control Flow
+✅ if, elif, else
+x = 10
+if x > 5:
+    print("Big")
+elif x == 5:
+    print("Equal")
+else:
+    print("Small")
+
+🔄 6. Loops #repeat a block of code
+🔁 for loop
+for i in range(3):
+    print(i)    # 0 1 2
+
+🔁 while loop 
+count = 0
+while count < 3:
+    print(count)
+    count += 1
+
+⚙️ 7. Functions
+def greet(name):
+    return f"Hello, {name}!"
+print(greet("Alice"))
+✅ Rules:
+Use def to define
+Use return to return values
+Can have default values: def greet(name="Guest")
+
+🧰 8. Operators
+🔢 Arithmetic
++  -  *  /  %  **  //
+🤔 Comparison
+==  !=  >  <  >=  <=
+🔗 Logical
+and   or   not
+
+🧪 9. Type Checking & Conversion
+type(5)           # <class 'int'>
+int("10")         # 10
+float("3.14")     # 3.14
+str(100)          # '100'
+
+📦 10. Collections
+📋 List
+fruits = ["🍎", "🍌"]
+fruits.append("🍇")
+🔐 Tuple
+coords = (10, 20)
+🔑 Dictionary
+person = {"name": "Alice", "age": 30}
+🚫 Set
+unique_numbers = {1, 2, 3}
+
+📂 11. File Handling
+with open("file.txt", "r") as f:
+    content = f.read()
+
+with open("file.txt", "w") as f:
+    f.write("Hello World!")
+
+🚫 12. Exception Handling
+try:
+    print(1 / 0)
+except ZeroDivisionError:
+    print("❌ Cannot divide by zero")
+finally:
+    print("✅ Done")
+
+🛠️ 13. Useful Built-in Functions
+Function	Use
+len()	Length of object
+sum()	Total of numbers
+max()	Maximum value
+min()	Minimum value
+sorted()	Return sorted list
+range()	Sequence of numbers
+type()	Data type
+
+📌 Summary of Syntax Rules
+Rule	Example
+✅ Indentation is required	if True:\n print("Yes")
+✅ Case-sensitive	myVar ≠ myvar
+✅ Comments start with #	# This is a comment
+✅ Use : after if, for, def	if x > 0:
+✅ Strings can use ' or "	'Hello' or "Hello"
