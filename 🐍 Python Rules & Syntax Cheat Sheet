@@ -42,7 +42,7 @@ Type	Example	Description
 int	5, -10	Whole numbers
 float	3.14, -0.01	Decimal numbers
 str	'hello', "world"	Text strings
-bool	True, False	Boolean logic
+bool	True, False	Boolean logic   #a="space",a=1>>bool(a) is true ,if a='no_space'/0>>false
 list	[1, 2, 3]	Ordered, mutable collection
 tuple	(1, 2, 3)	Ordered, immutable list
 dict	{"a": 1}	Key-value pairs
