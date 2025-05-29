@@ -69,7 +69,7 @@ sns.heatmap(df.corr(), annot=True, cmap="coolwarm")
 sns.pairplot(df)
 
 🧹 Data Cleaning Tips
-df.duplicated().sum() # Check duplicates
+df.duplicated().sum() # Check duplicates #.sum() gives the count
 df.drop_duplicates() # Drop duplicates
 df['col'].str.lower() # Lowercase text
 df['col'].str.contains('txt') # Text contains
