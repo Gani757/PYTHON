@@ -21,7 +21,7 @@ sns.boxplot(y=df['Price'])
 🔄 2. BIVARIATE ANALYSIS
 
 A. Categorical vs. Categorical
-pd.crosstab(df['shifted_from'], df['shifted_To'])
+pd.crosstab(df['shifted_from'], df['shifted_To'],margins=True)
 
 # Plot
 pd.crosstab(df['shifted_from'], df['shifted_To']).plot(kind='bar', stacked=True)
