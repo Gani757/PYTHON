@@ -50,6 +50,9 @@ np.std(a) # Standard deviation
 np.sum(a) # Sum
 np.arange(0, 10, 2) # [0 2 4 6 8]
 np.linspace(0, 1, 5) # [0. 0.25 0.5 0.75 1.]
+shape:
+np.reshape((row,col))
+np.ravel()
 
 📈 Matplotlib & Seaborn: Visualization
 Matplotlib
