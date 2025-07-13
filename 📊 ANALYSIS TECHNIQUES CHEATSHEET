@@ -1,0 +1,65 @@
+📊 ANALYSIS TECHNIQUES CHEATSHEET
+Analysis      Type	Variables	          Goal	                                            Tools/Functions Used
+Univariate	    1            	Understand distribution of a single variable    	       value_counts(), describe(), histplot, countplot, boxplot, df['col'].plot()
+
+Bivariate	      2	             Relationship between two variables	                    crosstab(), groupby(), scatterplot, boxplot, corr(), cov()
+
+Multivariate	  3+           	Relationship among multiple variables	                 pairplot, heatmap, catplot, groupby().agg(), regression models
+ 
+🔍 1. UNIVARIATE ANALYSIS
+A. Categorical Column
+
+df['shifted_To'].value_counts()
+sns.countplot(x='shifted_To', data=df)
+
+B. Numerical Column
+
+df['Price'].describe()
+sns.histplot(df['Price'], kde=True)
+sns.boxplot(y=df['Price'])
+
+🔄 2. BIVARIATE ANALYSIS
+
+A. Categorical vs. Categorical
+pd.crosstab(df['shifted_from'], df['shifted_To'])
+
+# Plot
+pd.crosstab(df['shifted_from'], df['shifted_To']).plot(kind='bar', stacked=True)
+
+B. Categorical vs. Numerical
+df.groupby('shifted_To')['Price'].mean()
+
+# Plot
+sns.boxplot(x='shifted_To', y='Price', data=df)
+
+C. Numerical vs. Numerical
+df[['Price', 'S.No']].corr()   # or df.corr() for all numerical
+df[['Price', 'S.No']].cov()
+
+# Plot
+sns.scatterplot(x='S.No', y='Price', data=df)
+
+🔁 3. MULTIVARIATE ANALYSIS
+A. Multiple Categorical
+sns.catplot(x='shifted_To', hue='shifted_from', col='Customer_name', data=df, kind='count')
+
+B. Numerical Correlation Matrix
+sns.heatmap(df.corr(), annot=True, cmap='coolwarm')
+
+C. Pairplot
+sns.pairplot(df[['Price', 'S.No']])
+
+✅ Summary
+Function	         Use For
+value_counts()	  Categorical frequency
+describe()	      Summary of numerical cols
+crosstab()	      Compare 2 categorical vars
+groupby()	        Grouped stats (mean/sum)
+corr()	          Correlation (numerical)
+cov()	            Covariance (numerical)
+countplot()	      Bar chart (categorical)
+histplot()	      Histogram (numerical)
+boxplot()	        Spread and outliers
+scatterplot()	    Numerical vs numerical
+heatmap()	        Multivariate numeric corr
+
