@@ -45,7 +45,8 @@ Sorting
 df.sort_values(by='col', ascending=False)
 
 🔢 NumPy: Numerical Operations
-a = np.array([1, 2, 3])
+a = np.array([1, 2, 3])  # 1D array   (list)
+a = np.array([[1, 2, 3]])  # 2D array  (list of list)
 np.mean(a) # Mean
 np.median(a) # Median
 np.std(a) # Standard deviation
@@ -53,6 +54,7 @@ np.sum(a) # Sum
 np.arange(0, 10, 2) # [0 2 4 6 8] ---- .arange(include,exclude,step)
 np.linspace(0, 1, 5) # [0. 0.25 0.5 0.75 1.] 
 np.percentile(a,0.25)   # 25% percentile
+np.matmul(()) # matrix multplication
 shape:
 np.reshape((row,col))
 np.ravel()
