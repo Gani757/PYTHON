@@ -19,6 +19,8 @@ df.describe() # Summary statistics
 df.columns # Column names
 df.shape # Rows & columns count
 df.dtypes # Data types
+df.size  # no of values
+
 
 Selecting Data
 df['col'] # Single column
