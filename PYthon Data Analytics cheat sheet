@@ -48,36 +48,50 @@ np.mean(a) # Mean
 np.median(a) # Median
 np.std(a) # Standard deviation
 np.sum(a) # Sum
-np.arange(0, 10, 2) # [0 2 4 6 8]
-np.linspace(0, 1, 5) # [0. 0.25 0.5 0.75 1.]
+np.arange(0, 10, 2) # [0 2 4 6 8] ---- .arange(include,exclude,step)
+np.linspace(0, 1, 5) # [0. 0.25 0.5 0.75 1.] 
+np.percentile(a,0.25)   # 25% percentile
 shape:
 np.reshape((row,col))
 np.ravel()
 
 📈 Matplotlib & Seaborn: Visualization
 Matplotlib
-plt.plot(df['col'])
-plt.scatter(x, y)
-plt.bar(x, height)
-plt.hist(df['col'], bins=10)
-plt.title("Title")
+plt.plot(df['col'])   #x-axis:time series, y-axis:numerical
+plt.scatter(x, y)     #x-axis:numerical, y-axis:numerical
+plt.bar(x, height)      #x-axis:categorical variable/column, y-axis:numerical
+plt.hist(df['col'], bins=10)   #x-axis:numerical
+plt.title("Title")           #title of the plot 
 plt.xlabel("X")
 plt.ylabel("Y")
 plt.show()
 
 Seaborn
-sns.histplot(df['col'])
-sns.boxplot(x='col1', y='col2', data=df)
-sns.heatmap(df.corr(), annot=True, cmap="coolwarm")
-sns.pairplot(df)
+sns.histplot(df['col'])         #x-axis:numerical, kde=True
+sns.boxplot(x='col1', y='col2', data=df)    #x-axis:categorical variable/column, y-axis:numerical
+sns.heatmap(df.corr(), annot=True, cmap="coolwarm")   # correlation matrix 
+sns.pairplot(df)                  
 
 🧹 Data Cleaning Tips
 df.duplicated().sum() # Check duplicates #.sum() gives the count
 df.drop_duplicates() # Drop duplicates
 df['col'].str.lower() # Lowercase text
 df['col'].str.contains('txt') # Text contains
+df['col']=df['col'].str.strip().str.title()   # 1st letter capital in each word of the column
+df['col']=df['col'].str.strip().str.title()   # 1st letter only capital 
 
 🧠 Statistical Summary
 df['col'].value_counts() # Frequency count
 df['col'].unique() # Unique values
-df.corr() # Correlation matrix
+df['col'].nunique() # number of unique 
+
+bivariate---2 numerical caolumns
+df.cov() # Correlation matrix  --- range(-infinity, infinity)
+df.corr() # Correlation matrix  --- range[-1,1]
+
+
+
+
+step 2:ANALYSIS TECHNIQUES CHEATSEET(UNI ,BI,MULTI VARIATE )
+
+
