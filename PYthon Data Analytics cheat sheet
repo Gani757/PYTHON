@@ -115,6 +115,8 @@ check normally distributed :
 df["col"].skew()    # range:  -1< skewness<1
 sns.histplot(df["col"],kde=True)
 
+----------------------------
+
 FEATURE TRANSFORMATION
 
 skew>1 (Right skewed) ---mean>median
