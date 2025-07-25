@@ -135,7 +135,40 @@ apply exp to convert to normal
 df["col"]=np.exp(df["col"])
 
 
-------------------------------
+--------------Notebook Structure (Suggested)----------------
+
+# 1. Import Libraries
+
+# 2. Load the Dataset
+
+# 3. Initial Data Inspection (df.info(), df.describe(), df.isnull().sum())
+
+# 4. Data Cleaning & Feature Engineering
+   - Convert Date
+   - Create yearmonth
+   - Handle missing/outliers
+   - Create log_dis, profit margin
+
+# ✅ 5. **Business KPIs & Summary Metrics (Add Here!)**
+      . Add KPIs / Summary Metrics
+    - Total Sales
+    - Total Profit
+    - Average Discount
+    - Top 5 Products by Sales and Profit
+    - Top 3 Countries by Profitability
+
+# 6. Exploratory Data Analysis
+   - Segment analysis
+   - Country analysis
+   - Product performance
+   - Discounts vs Profit
+
+# 7. Time Series Analysis (Monthly/Quarterly Sales & Profit Trends)
+
+# 8. Correlation Heatmap
+
+# 9. Final Insights & Recommendations
+----------Notebook Structure (Suggested)----------------
 
 
 step 3 :VISUAL ANALYSIS TECHNIQUES CHEATSEET(UNI ,BI,MULTI VARIATE )
