@@ -119,6 +119,9 @@ sns.histplot(df["col"],kde=True)
 
 FEATURE TRANSFORMATION
 
+Use Case	Reason for > 0:
+***Log transformation or normalization	Log of 0 is undefined → must remove zeros***
+
 skew>1 (Right skewed) ---mean>median
 
 apply log to convert to normal
