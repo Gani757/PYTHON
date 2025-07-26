@@ -1,10 +1,10 @@
 📊 ANALYSIS TECHNIQUES CHEATSHEET
-Analysis      Type	Variables	          Goal	                                            Tools/Functions Used
-Univariate	    1            	Understand distribution of a single variable    	       value_counts(), describe(), histplot, countplot, boxplot, df['col'].plot()
+Analysis Type    	Variables	          Goal	                                            Tools/Functions Used
+Univariate	       1            	Understand distribution of a single variable    	       value_counts(), describe(), histplot, countplot, boxplot, df['col'].plot()
 
-Bivariate	      2	             Relationship between two variables	                    crosstab(), groupby(), scatterplot, boxplot, corr(), cov()
+Bivariate	        2	             Relationship between two variables	                    crosstab(), groupby(), scatterplot, boxplot, corr(), cov()
 
-Multivariate	  3+           	Relationship among multiple variables	                 pairplot, heatmap, catplot, groupby().agg(), regression models
+Multivariate	     3+           	Relationship among multiple variables	                 pairplot, heatmap, catplot, groupby().agg(), regression models
  
 🔍 1. UNIVARIATE ANALYSIS
 A. Categorical Column
